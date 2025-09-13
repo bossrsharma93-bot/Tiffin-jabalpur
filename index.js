@@ -1,3 +1,3 @@
 import { registerRootComponent } from "expo";
-import App from "./App"; // root wali App.js ka sahi path
+import App from "./src/App"; // <- src ke andar App.js hai
 registerRootComponent(App);
