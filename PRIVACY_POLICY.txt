@@ -1,0 +1,7 @@
+Privacy Policy (sample) - Replace with company specific details.
+
+Data collected: phone number, name, email, address/location (for delivery), device push token.
+Purpose: order processing, delivery, notifications, analytics.
+Third parties: Firebase (Auth, FCM), Razorpay (payments), Google Maps (distance), Postgres (DB hosting).
+Retention: Personal data kept until account deletion + legal retention requirements.
+Contact: privacy@yourdomain.com

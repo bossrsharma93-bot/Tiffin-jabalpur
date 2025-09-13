@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: tiffin
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  api:
+    build: ./api_server_node
+    env_file: ./api_server_node/.env
+    depends_on:
+      - db
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./api_server_node:/usr/src/app
+    command: ["npm", "run", "dev"]
+
+volumes:
+  db-data:
